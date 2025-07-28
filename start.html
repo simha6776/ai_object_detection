@@ -1,0 +1,50 @@
+<!-- start.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Start Detection</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    h2 {
+      color: #00796b;
+    }
+    button {
+      padding: 12px 24px;
+      background: #00796b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ready to Start Object Detection?</h2>
+  <button onclick="startDetection()">Start Detection</button>
+
+  <script>
+    function startDetection() {
+      if (localStorage.getItem('loggedIn') === 'true') {
+        window.location.href = 'index.html';
+      } else {
+        alert('Please login first.');
+        window.location.href = 'login.html';
+      }
+    }
+  </script>
+</body>
+</html>
