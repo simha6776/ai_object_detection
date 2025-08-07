@@ -6,14 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register - AI Object Detection</title>
   <style>
-    body {
-      font-family: Arial;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #f1f8e9;
-    }
+    html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f8e9;
+  display: flex;
+  flex-direction: column;
+}
     .register-box {
       background: white;
       padding: 30px;
@@ -21,6 +22,12 @@
       box-shadow: 0 0 10px #aaa;
       text-align: center;
     }
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
     input {
       display: block;
       margin: 10px auto;
@@ -48,6 +55,7 @@
   </style>
 </head>
 <body>
+  <div class="main-content">
   <div class="register-box">
     <h2>Register</h2>
     <input type="text" id="reg-username" placeholder="Choose a username" required>
@@ -55,6 +63,7 @@
     <button onclick="register()">Register</button>
     <p>Already registered? <a href="login.html">Login here</a></p>
   </div>
+ </div>
 
   <script>
     function register() {
