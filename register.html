@@ -1,4 +1,4 @@
-<!-- register.html -->
+<!-- register.html 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,5 +86,104 @@
   <p>&copy; 2025 Simha6776 AI Object Detection Project. All rights reserved.<p><br>
  <strong> Developed by Narasimhamurthy H T<strong>
 </footer>
+</body>
+</html>-->
+
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - AI Object Detection</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f8e9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .register-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #aaa;
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 250px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #388e3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #2e7d32;
+    }
+
+    footer {
+      background: #f2f2f2;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #777;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <div class="register-box">
+      <h2>Register</h2>
+      <input type="text" id="reg-username" placeholder="Choose a username" required>
+      <input type="password" id="reg-password" placeholder="Choose a password" required>
+      <button onclick="register()">Register</button>
+      <p>Already registered? <a href="login.html">Login here</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Simha6776 AI Object Detection Project. All rights reserved.</p>
+    <p><strong>Developed by Narasimhamurthy H T</strong></p>
+  </footer>
+
+  <script>
+    function register() {
+      const username = document.getElementById("reg-username").value;
+      const password = document.getElementById("reg-password").value;
+
+      if (!username || !password) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      localStorage.setItem("user", username);
+      localStorage.setItem("pass", password);
+
+      alert("Registration successful! Now you can login.");
+      window.location.href = "login.html";
+    }
+  </script>
 </body>
 </html>
