@@ -2,10 +2,10 @@ body {
     text-align: center;
 }
 
-#video {
+/*#video {
     #width: 0px;
    # height: 0px;
-#}
+#}*/
 video, canvas {
   width: 90%;
   max-width: 600px;
