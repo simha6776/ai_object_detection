@@ -18,13 +18,3 @@ td {
     text-align: center;
 }
 
-
-#startBtn {
-  float: left;
-  margin: 20px;
-}
-
-#logoutBtn {
-  float: right;
-  margin: 20px;
-}
